@@ -1,0 +1,40 @@
+### **Merge Sort Stages**
+
+Given array: **[16, 21, 11, 8, 12, 22]**
+
+Merge Sort works by repeatedly dividing the array into halves, sorting each half, and merging them back together.
+
+1. **Divide the Array**  
+   - Split the array into two halves:  
+     **[16, 21, 11]** and **[8, 12, 22]**
+
+2. **Divide Each Half Further**  
+   - Left half: **[16, 21, 11]** → Split into **[16]** and **[21, 11]**  
+   - Right half: **[8, 12, 22]** → Split into **[8]** and **[12, 22]**
+
+3. **Divide Further Until Single Elements**  
+   - **[21, 11]** → Split into **[21]** and **[11]**  
+   - **[12, 22]** → Split into **[12]** and **[22]**
+
+4. **Merge and Sort Pairs**  
+   - Merge **[21]** and **[11]** → **[11, 21]**  
+   - Merge **[12]** and **[22]** → **[12, 22]**
+
+5. **Merge Halves Back Together**  
+   - Merge **[16]** and **[11, 21]** → **[11, 16, 21]**  
+   - Merge **[8]** and **[12, 22]** → **[8, 12, 22]**
+
+6. **Merge Final Halves**  
+   - Merge **[11, 16, 21]** and **[8, 12, 22]** → **[8, 11, 12, 16, 21, 22]**
+
+Final sorted array: **[8, 11, 12, 16, 21, 22]**
+
+---
+
+### **Big-O Notation**
+
+- **Best case**: \( O(n \log n) \)  
+- **Worst case**: \( O(n \log n) \)  
+- **Average case**: \( O(n \log n) \)
+
+Merge Sort consistently has a time complexity of \( O(n \log n) \) in all cases because it divides the array into halves (logarithmic complexity) and merges them (linear complexity).
